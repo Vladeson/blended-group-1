@@ -154,3 +154,53 @@
 // console.log(calcTotalPrice(stones, "Изумруд"));
 // add("Diamond");
 // console.log(stones);
+
+
+
+// Створіть об'єкт calculator із трьома методами
+// read(a, b) - приймає два аргументи та зберігає їх
+// як властивості об'єкта
+// sum() повертає суму збережених значень
+// mult() перемножує збережені значення та повертає результат
+
+// const calculator = {
+//     read(a, b) {
+//         this.num1 = a
+//         this.num2 = b
+//         return {num1: this.num1, num2: this.num2 }
+//     },
+//     sum() {
+// return this.num1 + this.num2
+//     },
+//     mult() {
+// return this.num1 * this.num2
+//     }
+// }
+
+// console.log(calculator.read(8, 15))
+// console.log(calculator.sum(8, 15))
+// console.log(calculator.mult(8, 15))
+
+
+// TODO:=======================
+// Додати метод getinfo в об'єкт user, який повертатиме інфу про користувача у форматі
+// Name: Peter. Surname: Parker. Age: 22. Position: spider-man.
+
+const user = {
+    name: 'Peter',
+    surname: 'Parker',
+    age: 22,
+    position: 'spider-man'
+}
+const user2 = {
+  name: "Batman",
+  surname: "Hz",
+  age: 36,
+  position: "batman",
+};
+user.getinfo = getinfo
+user2.getinfo = getinfo
+console.log(user.getinfo())
+function getinfo() { 
+    return `Name: ${this.name}. Surname: ${this.surname}. Age: ${this.age}. Position: ${this.position}.`
+}
