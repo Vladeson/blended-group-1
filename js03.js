@@ -19,8 +19,6 @@
 
 // letMeSeeYourName(greet)
 
-
-
 // TODO:==============================================
 // Напишіть дві функції
 // makeProduct(name, price, callback) - приймає
@@ -55,7 +53,6 @@
 // makeDish("Mango", "apple pie");
 // makeDish("Poly", "muffins");
 
-
 // function makeShef(shefName) {
 //     console.log(shefName)
 //     return function makeDish(dish) {
@@ -68,3 +65,80 @@
 // const poly = makeShef("Poly")
 // poly("fish")
 // console.log(typeof(mango))
+
+//Напиши клас Client який створює об'єкт
+//з ​​властивостями login email
+//Оголоси приватні властивості #login #email,
+//доступ до яких зроби через геттер та сеттер login email
+
+// class Client {
+//   #login;
+//   #email;
+
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get dataClient() {
+//     return { login: this.#login, email: this.#email };
+//   }
+
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const newClient = new Client("userlogin", "user@mail.ua");
+// console.log(newClient.dataClient);
+// newClient.login = "newUserlogin";
+// newClient.email = "upoly@mail.ua";
+// console.log(newClient.dataClient);
+
+//TODO:=============================================
+//Напиши клас Notes який управляє колекцією нотаток у
+//властивості items.
+//Нотатка - це об'єкт із властивостями text і priority.
+//Додай класу статичний метод Priopity,
+//який буде повертати об'єкт із пріоритетами.
+//Додай методи addNote(note), removeNote(text)
+//updatePriority(text, newPriority)
+
+// class Notes {
+//   static Priopity() {
+//     return { HIGH: "high", LOW: "low" };
+//   }
+//   constructor() {
+//     this.items = [];
+//   }
+
+//   addNote(note) {
+//     this.items.push(note);
+//   }
+
+//   removeNote(text) {
+//     const toRemove = this.items.findIndex((item) => item.text === text);
+
+//     if (toRemove !== -1) {
+//       this.items.splice(toRemove, 1);
+//     }
+//   }
+
+//   updatePriority(text, newPriority) {
+//     const toUpdate = this.items.findIndex((item) => item.text === text);
+//     if (toUpdate !== -1) {
+//       this.items[toUpdate].priority = newPriority;
+//     }
+//   }
+// }
+
+// const note = new Notes();
+// note.addNote({ text: "to do", priority: Notes.Priopity().HIGH });
+// note.addNote({ text: "to resolve", priority: Notes.Priopity().LOW });
+// note.removeNote("to do");
+// console.table(note.items);
+// note.updatePriority("to resolve", Notes.Priopity().HIGH);
+// console.table(note.items);
