@@ -142,3 +142,45 @@
 // console.table(note.items);
 // note.updatePriority("to resolve", Notes.Priopity().HIGH);
 // console.table(note.items);
+
+//TODO:======================
+// Створи клас для калькулятора, який має такі методи:
+// метод number, який набуває початкового значення для наступних операцій
+// Геттер, який повертає фінальний результат усіх операцій, проведених із числом
+// методи add, substruct, divide, multiply
+
+class Calculate {
+  constructor() {
+    this.number = 0;
+  }
+
+  get result() {
+    return this.number;
+  }
+
+  add(addition) {
+    this.number += addition;
+  }
+
+  substruct(substruction) {
+    this.number -= substruction;
+  }
+
+  divide(division) {
+    if (division === 0) {
+      return console.log("Ділити на 0 не можна!");
+    }
+    this.number /= division;
+  }
+
+  multiply(multiplication) {
+    this.number *= multiplication;
+  }
+}
+const calculator = new Calculate();
+calculator.add(5);
+calculator.add(10);
+calculator.substruct(8);
+calculator.divide(2);
+calculator.multiply(10);
+console.log(calculator.result);
