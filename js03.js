@@ -149,38 +149,86 @@
 // Геттер, який повертає фінальний результат усіх операцій, проведених із числом
 // методи add, substruct, divide, multiply
 
-class Calculate {
-  constructor() {
-    this.number = 0;
-  }
+// class Calculate {
+//   constructor() {
+//     this.number = 0;
+//   }
 
-  get result() {
-    return this.number;
-  }
+//   get result() {
+//     return this.number;
+//   }
 
-  add(addition) {
-    this.number += addition;
-  }
+//   add(addition) {
+//     this.number += addition;
+//   }
 
-  substruct(substruction) {
-    this.number -= substruction;
-  }
+//   substruct(substruction) {
+//     this.number -= substruction;
+//   }
 
-  divide(division) {
-    if (division === 0) {
-      return console.log("Ділити на 0 не можна!");
-    }
-    this.number /= division;
-  }
+//   divide(division) {
+//     if (division === 0) {
+//       return console.log("Ділити на 0 не можна!");
+//     }
+//     this.number /= division;
+//   }
 
-  multiply(multiplication) {
-    this.number *= multiplication;
-  }
-}
-const calculator = new Calculate();
-calculator.add(5);
-calculator.add(10);
-calculator.substruct(8);
-calculator.divide(2);
-calculator.multiply(10);
-console.log(calculator.result);
+//   multiply(multiplication) {
+//     this.number *= multiplication;
+//   }
+// }
+// const calculator = new Calculate();
+// calculator.add(5);
+// calculator.add(10);
+// calculator.substruct(8);
+// calculator.divide(2);
+// calculator.multiply(10);
+// console.log(calculator.result);
+
+
+// Задача: написати клас, який буде представляти зоопарк тварин.
+// У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
+// Кожен тип тварин повинен мати свої властивості та методи, наприклад,
+//  методи для отримання інформації про тварину та для годівлі тварин.
+//  Крім того, зоопарк повинен мати метод для додавання тварин до списку та
+// метод для виведення списку всіх тварин у зоопарку.
+
+// class Zoo {
+//     constructor() {
+//         this.animals = []
+//     }
+//     getAnimalList() {
+//         this.animals.forEach(animal => console.log(animal.getInfo()))
+//     }
+//     addAnimal(newAnimal) {
+//         this.animals.push(newAnimal)
+//     }
+// }
+
+// class Animal {
+//     constructor(name, type) {
+//         this.name = name
+//         this.type = type
+//     }
+//     getInfo() {
+//         return `Name: ${this.name} , type: ${this.type}`
+//     }
+// }
+
+// class Mammal extends Animal {
+//     constructor(name, type, speciel) {
+//         super(name, type)
+//         this.speciel = speciel
+//     }
+//      getInfo() {
+//         return `${super.getInfo()}, speciel: ${this.speciel}`
+//     }
+// }
+
+// const lion = new Mammal("Simba", "lion", "mane")
+// const cat = new Mammal("Aisha", "street cat", "brown")
+// const zoo = new Zoo() 
+// zoo.addAnimal(lion)
+// zoo.addAnimal(cat)
+// zoo.getAnimalList()
+
